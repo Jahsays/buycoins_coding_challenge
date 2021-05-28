@@ -1,0 +1,38 @@
+*, *::before ,*::after{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.navigation{
+    background-color: #24292f;
+    height: 2.5em;
+}
+.nav{
+    /* width: 60%; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.navbar{
+    width: 60%;
+    /* background-color: teal; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center; 
+}
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
+input{
+    width: 22em;
+    height: 2em;
+    border-radius: 0.4em;
+    background: transparent;
+    border: 1px solid rgb(134, 131, 131);
+    color: #ffffff;
+}
+i{
+    color: black;
+    background-color: #ffffff;
+}
