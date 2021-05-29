@@ -36,3 +36,109 @@ i{
     color: black;
     background-color: #ffffff;
 }
+
+.content{
+    display: flex;
+}
+.profile{
+    width: 30%;
+    height: 100%;
+    border: 2px solid blue;
+}
+
+.profile_image{
+    height: 15em;
+    width: 100%;
+    border: 2px solid brown;
+    display: flex;
+    justify-content: center;
+
+}
+img{
+    height: inherit;
+    width: 15em;
+    border-radius: 50%;
+}
+.username, .profile_description, .follow{
+    position: relative;
+    left: 3em;
+}
+/* .profile_description{
+    display: flex;
+    justify-content: center;
+} */
+.follow{
+    display: flex;
+    border: 2px solid red;
+    justify-content: space-between;
+    width: 70%;
+}
+.repo{
+    width: 70%;
+    height: 100%;
+    /* border: 2px solid rgb(43, 255, 0); */
+}
+.item_{
+    /* border: 1px solid red; */
+    height: 6em;
+    /* position: relative;
+    bottom: 1em; */
+    /* margin-top: 2em; */
+}
+.label{
+    display: flex;
+    justify-content: center;
+}
+.repo_name{
+    display: flex;
+    /* border: 1px solid green; */
+    justify-content: space-between;
+    /* align-items: center; */
+    height: 2.5em;
+    position: relative;
+    /* top: 2em; */
+}
+.repo_name p{
+font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'Space Grotesk', sans-serif;
+    color: #0266d6;
+}
+.repo_description{
+    height: 2em;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+.star-icon{
+    border-radius: 0.4em;
+    height: 2em;
+    width: 5em;
+    border: 1px solid rgb(172, 162, 162);
+    background-color: #fafbfc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.repo_details{
+    position: relative;
+    top: 1.1em;
+}
+.repo_details_{
+    border: 1px solid purple;
+    height: 1.5em;
+    display: flex;
+    width: 45%;
+    justify-content: space-between;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+.hr_two{
+    /* height: 10em; */
+    /* width: 40em; */
+    position: relative;
+    top: 1.5em;
+    /* align-self: auto; */
+}
+    
