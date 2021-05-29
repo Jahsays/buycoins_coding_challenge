@@ -1,5 +1,7 @@
 let profile_image = document.querySelector(".profile_image");
-let userName = document.querySelector(".username h1");
+let userName = document.querySelector(".username p");
+let idName = document.querySelector(".username h2")
+let profile = document.querySelector(".profile_description p")
 let followers_ = document.querySelector(".followers_ span");
 let follow_ = document.querySelector(".follow_ span");
 let repo_details = document.querySelector(".repo_details");
@@ -46,6 +48,8 @@ function fetchUser() {
         }else{
             profile_image.innerHTML = `<img src="${data.avatar_url}">`;
             userName.innerHTML = data.login;
+            profile.innerHTML = data.bio;
+            idName.innerHTML = data.name;
             followers_.innerHTML = data.followers;
             follow_.innerHTML = data.following;
         }
@@ -61,7 +65,7 @@ function fetchUser() {
           repo_details.innerHTML = `
           
           <div class="item_">
-          <div class="repo_name"> No Repo Found</div>
+          <div class="repo_name"><p>No Repo Found</p></div>
           </div>
           `
       }else{
@@ -70,7 +74,7 @@ function fetchUser() {
             repo_details.innerHTML=`
         
             <div class="item_">
-                            <div class="repo_name">Todo App <div class="star-icon">
+                            <div class="repo_name"><p>Todo App</p> <div class="star-icon">
                             <i class="far fa-star">Star</i></div>
                             </div>
                             <div class="repo_details_">
@@ -92,8 +96,8 @@ function fetchUser() {
                             console.log(item);
                             return(
                                 `
-                                <div class="item_">
-                            <div class="repo_name">${item.name}<div class="star-icon">
+                        <div class="item_">
+                            <div class="repo_name"><p>${item.name}</p><div class="star-icon">
                             <i class="far fa-star">Star</i></div>
                             </div>
                             <div class="repo_details_">
@@ -104,6 +108,7 @@ function fetchUser() {
                                     <p><i class="fas fa-code-branch"></i>${item.forks}</p>
                                 </div>
                             </div>
+                            <hr class="hr_two">
                         </div>
                                 `
                             );
