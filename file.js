@@ -1,9 +1,7 @@
 let profile_image = document.querySelector(".profile_image");
 let userName = document.querySelector(".username p");
-let idName = document.querySelector(".username h2")
+let idName = document.querySelector(".username h3")
 let profile = document.querySelector(".profile_description p")
-let followers_ = document.querySelector(".followers_ span");
-let follow_ = document.querySelector(".follow_ span");
 let repo_details = document.querySelector(".repo_details");
 // let profile_image = document.querySelector(".profile_image");
 
@@ -50,8 +48,6 @@ function fetchUser() {
             userName.innerHTML = data.login;
             profile.innerHTML = data.bio;
             idName.innerHTML = data.name;
-            followers_.innerHTML = data.followers;
-            follow_.innerHTML = data.following;
         }
     })
 
@@ -89,8 +85,6 @@ function fetchUser() {
                         `
                         profile_image.innerHTML = `<img src="profile-sample.jpg">`;
                         userName.innerHTML = "jahsays";
-                        followers_.innerHTML = "4";
-                        follow_.innerHTML = "40";
                     }else{
                         let repo_Data = repo_data.map(item =>{
                             console.log(item);
@@ -100,13 +94,20 @@ function fetchUser() {
                             <div class="repo_name"><p>${item.name}</p><div class="star-icon">
                             <i class="far fa-star">Star</i></div>
                             </div>
+                            <div class="repo_description"><p> ${item.description}</p></div>
                             <div class="repo_details_">
+                            <div class="language">
+                                <p>${item.language}</p>
+                            </div>
                                 <div class="info_ star">
                                     <p><i class="far fa-star"></i>${item.watchers}</p>
                                 </div>
                                 <div class="info_ fork">
                                     <p><i class="fas fa-code-branch"></i>${item.forks}</p>
                                 </div>
+                                <div class="last updated">
+                                <p>${item.updated_at}</p>
+                            </div>
                             </div>
                             <hr class="hr_two">
                         </div>
@@ -114,7 +115,7 @@ function fetchUser() {
                             );
                         })
                         // maximum of 20 repos
-                        repo_details.innerHTML = repo_Data.slice(0, 20); 
+                        repo_details.innerHTML = repo_Data.slice(0, 15); 
         }
 
       }
