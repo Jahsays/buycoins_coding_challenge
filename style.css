@@ -3,9 +3,9 @@
     margin: 0px;
     box-sizing: border-box;
 }
-body{
-    /* margin: 2em; */
-}
+/* body{
+    margin: 2em;
+} */
 .navigation{
     background-color: #24292f;
     height: 2.5em;
@@ -15,6 +15,19 @@ body{
     height: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin-left: 1em;
+    margin-right: 1.5em;
+}
+.notifications{
+    /* border: 1px solid red; */
+    width: 8em;
+    display: flex;
+    justify-content: space-evenly;
+}
+.fa-bell,.fa-caret-down,.fa-circle, .fa-plus{
+    background: transparent;
+    color: #ffffff;
 }
 .navbar{
     width: 60%;
@@ -46,6 +59,10 @@ input{
 i{
     color: black;
     background-color: #ffffff;
+}
+.fa-github{
+    color: #ffffff;
+    background-color: transparent;
 }
 
 .content{
@@ -178,5 +195,74 @@ font-size: 1.2em;
     top: 1.5em; */
     margin-top: 1em;
     /* align-self: auto; */
+}
+
+@media (max-width: 455px) {
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
+    .profile{
+        width: 90%;
+        /* border: 1px solid red; */
+        height: 100%;
+        /* border: 2px solid blue; */
+        font-family: 'Open Sans', sans-serif;
+        margin-left: 2em;
+        margin-top: 2em;
+        margin-bottom: 10em;
+        display: flex;
+        /* flex-direction: row; */
+    }
+    
+    .profile_image{
+        height: 7em;
+        width: 100%;
+        /* border: 2px solid brown; */
+        display: flex;
+        justify-content: center;
+        /* border: 2px solid brown; */
+    }
+     .profile_description{
+        position: relative;
+        top: 9em;
+        left: -9em;
+        border: 1px solid blue;
+        /* width: 24em; */
+    }
+    img{
+        height: inherit;
+        width: 7em;
+        border-radius: 50%;
+    }
+    .repo_name p{
+      /* border: 1px solid blue; */
+      display: flex;
+      flex-direction: column;
+    }
+    .repo_name{
+        /* border: 1px solid red; */
+        height: fit-content;
+        margin-top: 1em; 
+        width: 18em;
+       
+        /* margin-bottom: 1em; */
+    }
+    .repo_description{
+        /* border: 1px solid yellow; */
+        /* margin-bottom: 1em; */
+        height: max-content;
+        width: 22em;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .repo_details_{
+       /* border: 1px solid green; */
+       width: 22em;
+    }
+    .hr_two{
+        margin-bottom: 1em;
+    }
 }
     
