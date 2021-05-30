@@ -30,7 +30,7 @@ function inputFunction() {
 // add an eventlistener to the input button so when you hit enter it submits
 document.querySelector(".input_user").addEventListener("keyup", function (e) {
     if(e.keyCode === 13) {
-        // alert("tou have pressed enter")
+        // alert("you have pressed enter")
         inputFunction()
     }
 })
@@ -114,7 +114,7 @@ function fetchUser() {
                                 `
                             );
                         })
-                        // maximum of 20 repos
+                        // maximum of 15 repos
                         repo_details.innerHTML = repo_Data.slice(0, 15); 
         }
 
