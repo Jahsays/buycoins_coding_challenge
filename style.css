@@ -189,73 +189,85 @@ font-size: 1.2em;
     font-weight: 600;
 }
 .hr_two{
-    /* height: 10em; */
-    /* width: 40em; */
-    /* position: relative;
-    top: 1.5em; */
     margin-top: 1em;
-    /* align-self: auto; */
 }
+
+
+
 
 @media (max-width: 455px) {
     .content{
         display: flex;
         flex-direction: column;
     }
+    .notifications, a{
+        visibility: hidden;
+    }
+    /* .container{
+    } */
+    .input_user{
+        /* border: 1px solid green; */
+        position: relative;
+        left: 14em;
+    }
     .profile{
         width: 90%;
         /* border: 1px solid red; */
         height: 100%;
-        /* border: 2px solid blue; */
         font-family: 'Open Sans', sans-serif;
-        margin-left: 2em;
         margin-top: 2em;
-        margin-bottom: 10em;
-        display: flex;
-        /* flex-direction: row; */
+        margin-bottom: 5em;
     }
-    
+    .username{
+        /* border: 1px solid green; */
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        position: relative;
+        left: 0;
+        justify-content: center;
+        align-items: center;
+    }
     .profile_image{
         height: 7em;
         width: 100%;
-        /* border: 2px solid brown; */
-        display: flex;
-        justify-content: center;
-        /* border: 2px solid brown; */
     }
      .profile_description{
+        /* border: 1px solid blue; */
+        margin: 0;
         position: relative;
-        top: 9em;
-        left: -9em;
-        border: 1px solid blue;
-        /* width: 24em; */
+        left: 0;
+        width: 100%;
     }
     img{
         height: inherit;
         width: 7em;
         border-radius: 50%;
     }
+    .repo{
+        width: 90%;
+    }
     .repo_name p{
       /* border: 1px solid blue; */
       display: flex;
       flex-direction: column;
+      width: inherit 
     }
     .repo_name{
         /* border: 1px solid red; */
         height: fit-content;
         margin-top: 1em; 
-        width: 18em;
-       
-        /* margin-bottom: 1em; */
+        width: inherit;
     }
     .repo_description{
         /* border: 1px solid yellow; */
-        /* margin-bottom: 1em; */
         height: max-content;
-        width: 22em;
+        width: 100%;
         display: flex;
         flex-direction: column;
         overflow: hidden;
+        margin-bottom: 1em;
     }
     .repo_details_{
        /* border: 1px solid green; */
